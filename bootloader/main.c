@@ -81,7 +81,8 @@ bool sd_mount()
 	else
 	{
 		int res = 0;
-		res = f_mount(&sd_fs, "", 1);
+		res = f_mount(&sd_fs, "1:", 1);
+		f_chdrive("1:");
 		if (res == FR_OK)
 		{
 			sd_mounted = 1;
